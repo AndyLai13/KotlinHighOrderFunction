@@ -4,12 +4,11 @@ val list = listOf(1, 2, 3, 4, 5)
 
 fun main(args: Array<String>) {
     with()
+    Delegate().exec()
 }
-fun showResult(result: Any) {
-    println("result = $result")
-}
+
 fun run() {
-    run{
+    run {
         val drink = FiftyLan()
         drink.plasticBag = true
         drink
@@ -60,6 +59,7 @@ fun let() {
 
 fun apply() {
     data class Person(var name: String, var age: Int)
+
     val person = Person("Andy", 30)
     person.apply { this.age = 20 }
     println(person)
@@ -87,6 +87,10 @@ class FiftyLan {
     var plasticBag = false
     fun setSugarLevel(level: SugarLevel) {}
     fun setIceLevel(level: IceLevel) {}
-    enum class SugarLevel { Half,All }
-    enum class IceLevel { Few,All }
+    enum class SugarLevel { Half, All }
+    enum class IceLevel { Few, All }
+}
+
+fun delegate() {
+
 }
